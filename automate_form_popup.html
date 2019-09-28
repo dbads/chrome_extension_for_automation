@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            min-width: 500px; /* your desired width */
+            min-height: 300px;
+            max-width: 100%;
+            position: relative;
+            vertical-align:middle;
+            overflow: scroll;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container"> 
+        <div class="card" style="border: none;">
+            <div class="card-header badge-info" data-background-colot="green" style="margin-top: 20px;">
+                <h4 class="title text-center">Form Submission Emulation</h4>
+            </div>
+            <button id="generate_form_fields" class="btn btn-warning" style="margin-top:30px;"> Click to generate input fields for the college link on the current tab</button>
+            
+            <div id="form_fields_card" class="card-content jumbotron" style="display: none;">
+                
+            </div>
+            <button id="emulate" class="btn btn-info btn-block" style="display: none; margin-bottom:30px;">emulate</button>
+    
+        </div>
+
+        <h6 id="result_status_success" class="btn text-center"></h6>
+        <div id="emulation_result" class="card list-group-item-danger" style="display: none;">
+            <div class="card-header" style="margin-top:20px;">
+                <h6 id="result_status" class="btn text-center"></h6>
+            </div>
+            <div class="card-content">
+                <ul id="emulation_ul">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!--complete javascript-->
+    <!--javascript bundle-->
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <!--jquery-->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/background.js"></script>
+
+</body>
+</html>

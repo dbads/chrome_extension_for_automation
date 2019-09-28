@@ -1,0 +1,31 @@
+{
+    "name": "automate form extension",
+    "version":"1.0",
+    "description": "Form submission emulation",
+    "manifest_version":2,
+    "browser_action": {
+        "default_icon": "./images/extension.png",
+        "default_popup": "automate_form_popup.html",
+        "default_title": "Emulation continues"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "all_frames": false,
+        "js": ["./js/content.js","./js/jquery-3.4.1.min.js"]
+      }
+    ],
+    "background": {
+      "scripts": ["./js/background.js","./js/jquery-3.4.1.min.js"],
+      "persistent": false
+    },
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "http://localhost:8000/*",
+    "*",
+    "storage",
+    "tabs"
+  ]
+}
